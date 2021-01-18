@@ -51,11 +51,12 @@ class _AppDrawerState extends State<AppDrawer> {
                 child: CircleAvatar(
                   maxRadius: 30,
                   backgroundColor: Colors.grey,
-                  child: Icon(
-                    FontAwesomeIcons.userAlt,
-                    color: Colors.white,
-                    size: 30,
-                  ),
+                  backgroundImage: AssetImage('images/solo.jpeg'),
+                  // child: Icon(
+                  //   FontAwesomeIcons.userAlt,
+                  //   color: Colors.white,
+                  //   size: 30,
+                  // ),
                 ),
               ),
               Center(
