@@ -5,16 +5,22 @@
 
     <!-- You can insert your own image assets here -->
 <<<<<<< HEAD
+<<<<<<< HEAD
     <item>
         <bitmap
             android:gravity="center"
             android:src="@mipmap/mtnlogo" />
     </item>
 =======
+=======
+>>>>>>> 16862d27d82088ddcc154061f20589bb2ce1b365
     <!-- <item>
         <bitmap
             android:gravity="center"
             android:src="@mipmap/launch_image" />
     </item> -->
+<<<<<<< HEAD
+>>>>>>> 16862d27d82088ddcc154061f20589bb2ce1b365
+=======
 >>>>>>> 16862d27d82088ddcc154061f20589bb2ce1b365
 </layer-list>
