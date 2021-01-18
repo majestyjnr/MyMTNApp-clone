@@ -1,4 +1,6 @@
+import 'package:MyMTNAppClone/screens/carousel.dart';
 import 'package:MyMTNAppClone/screens/drawer.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -10,6 +12,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int _current = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,8 +64,47 @@ class _HomeState extends State<Home> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 5,
             ),
+            Container(
+              child: CarouselSlider.builder(
+                initialPage: _current,
+                height: 120,
+                autoPlay: true,
+                viewportFraction: 0.75,
+                onPageChanged: (index) {
+                  setState(() {
+                    _current = index;
+                  });
+                },
+                itemCount: carousel.length,
+                itemBuilder: (context, index) {
+                  return Transform.scale(
+                    scale: index == _current ? 1 : 0.8,
+                    child: Container(
+                      height: 200,
+                      width: 320,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                        image: DecorationImage(
+                          image: AssetImage(carousel[index].image),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      // child: Padding(
+                      //   padding: const EdgeInsets.all(8.0),
+                      //   child: Text(
+                      //     // carouselData[index].description,
+                      //   ),
+                      // ),
+                    ),
+                  );
+                },
+              ),
+            ),
+            SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
@@ -125,7 +167,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-             Padding(
+            Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
                 elevation: 8,
@@ -187,7 +229,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-             Padding(
+            Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
                 elevation: 8,
@@ -236,14 +278,21 @@ class _HomeState extends State<Home> {
                             ),
                           ],
                         ),
-                        trailing: IconButton(icon: Icon(Icons.arrow_forward_ios, color: Color.fromRGBO(68, 95, 150, 1),), onPressed: (){}),
+                        trailing: IconButton(
+                            icon: Icon(
+                              Icons.arrow_forward_ios,
+                              color: Color.fromRGBO(68, 95, 150, 1),
+                            ),
+                            onPressed: () {}),
                       ),
                     ),
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 50,),
+            SizedBox(
+              height: 30,
+            ),
             Material(
               shadowColor: Color.fromRGBO(255, 191, 0, 1),
               child: InkWell(
@@ -282,7 +331,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 5,
             ),
           ],
         ),

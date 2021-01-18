@@ -31,6 +31,8 @@ dependencies:
 
   eva_icons_flutter: 
   font_awesome_flutter:
+  carousel_slider: ^1.4.1
+  page_indicator:
 
 dev_dependencies:
   flutter_test:
