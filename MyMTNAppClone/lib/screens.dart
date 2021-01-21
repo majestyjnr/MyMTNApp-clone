@@ -5,3 +5,5 @@ export 'screens/Home.dart';
 export 'screens/Just4U.dart';
 export 'screens/MoMo.dart';
 export 'screens/drawer.dart';
+export 'screens/Help.dart';
+

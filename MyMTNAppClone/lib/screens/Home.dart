@@ -1,3 +1,4 @@
+import 'package:MyMTNAppClone/screens/Help.dart';
 import 'package:MyMTNAppClone/screens/carousel.dart';
 import 'package:MyMTNAppClone/screens/drawer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -104,7 +105,9 @@ class _HomeState extends State<Home> {
                 },
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
@@ -296,7 +299,16 @@ class _HomeState extends State<Home> {
             Material(
               shadowColor: Color.fromRGBO(255, 191, 0, 1),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return Help();
+                      },
+                    ),
+                  );
+                },
                 child: Container(
                   height: 70,
                   width: 50,
@@ -316,7 +328,16 @@ class _HomeState extends State<Home> {
                           color: Colors.white,
                           size: 20,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return Help();
+                              },
+                            ),
+                          );
+                        },
                       ),
                       Text(
                         'Help',
